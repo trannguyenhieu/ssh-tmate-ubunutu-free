@@ -1,22 +1,21 @@
 name: vpslinux
 on:
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: tạo vps
         run: pkill -9 tmate
-       - name: tạo vps
+       - name: thfy
          run: wget -nc https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
         - name: tạo vps
           run: tar --skip-old-files -xvf tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
-       - name: tạo vps
+       - name: vpig
          run: rm -f nohup.out; bash -ic 'nohup ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock new-session -d & disown -a' >/dev/null 2>&1
-       - name: tạo vps
+       - name: tkj
          run: ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock wait tmate-ready
-      - name: tạo vps 
+      - name: ihij
         run: ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with SSH address: #{tmate_ssh}"
-      - name: tạo vps
+      - name: tpjk
         run: ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with web: #{tmate_web}"
